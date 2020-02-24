@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>UniLogin demo</title>
+  </head>
+  <body>
+    <script src="main.js"></script>
+    <button id="unilogin-button"></button>
+    
+    <p style="margin-top: 80px;">
+      <code>provider</code> and <code>signer</code> are available globally on this page.
+      <br>
+      Try them out from the console.
+    </p>
+    <p>
+      Getting the account address:
+      <br>
+      <code style="white-space: pre;">
+        signer.getAddress().then(console.log)
+      </code>
+    </p>
+    <p>
+      Sending a transaction:
+      <br>
+      <code style="white-space: pre;">
+        signer.sendTransaction({
+          to: '0xF80fd6F5eF91230805508bB28d75248024E50F6F',
+          value: utils.parseEther('0.003'),
+        }).then(console.log)
+      </code>
+    </p>
+  </body>
+</html>

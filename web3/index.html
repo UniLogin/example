@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>UniLogin demo</title>
+  </head>
+  <body>
+    <script src="main.js"></script>
+    <button id="unilogin-button"></button>
+    
+    <p style="margin-top: 80px;">
+      <code>web3</code> is available globally on this page.
+    </p>
+    <p>
+      Try sending a transaction from the console:
+      <br>
+      <code style="white-space: pre;">
+        async function sendTransaction() {
+          const [account] = await web3.eth.getAccounts()
+          const tx = await web3.eth.sendTransaction({
+            from: account,
+            to: '0xF80fd6F5eF91230805508bB28d75248024E50F6F',
+            value: web3.utils.toWei('0.003'),
+          })
+          console.log(tx)
+        }
+        sendTransaction()
+      </code>
+    </p>
+  </body>
+</html>
